@@ -22,4 +22,5 @@ Once running, U will be able to set alarms for the current day on when you'd lik
 Provide you with current relevant Covid,news and weather information if you wish to not set an alarm.
 ## Details
 Author: Tanushka Shankar
+
 License: MIT licence 
