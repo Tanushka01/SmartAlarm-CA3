@@ -1,0 +1,411 @@
+INFO: [2020-12-11 03:55:51,673] -- Alarm scheduler set up 
+INFO: [2020-12-11 03:55:52,697] --  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: [2020-12-11 03:56:14,940] -- Alarm scheduler set up 
+INFO: [2020-12-11 03:56:15,617] --  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: [2020-12-11 03:56:40,264] -- Alarm scheduler set up 
+INFO: [2020-12-11 03:56:40,963] --  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 04:14:46,817  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 04:17:07,384  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 04:19:40,349  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG: 2020-12-11 04:19:58,789 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:19:58,877 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:19:58,908 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:19:59,751 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:19:59,838 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:20:00,467 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:20:00,490 127.0.0.1 - - [11/Dec/2020 04:20:00] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG: 2020-12-11 04:20:02,468 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:20:02,574 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:20:02,582 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:20:03,035 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:20:03,127 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:20:03,464 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+ERROR: 2020-12-11 04:20:03,472 Exception on /index [GET]
+Traceback (most recent call last):
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/tan/Desktop/ECM1400/CA3/CA3main.py", line 65, in controller
+    if i['title'] == notif_item['title']:
+TypeError: string indices must be integers
+INFO: 2020-12-11 04:20:03,479 127.0.0.1 - - [11/Dec/2020 04:20:03] "[35m[1mGET /index?notif=Total+Covid+cases+ HTTP/1.1[0m" 500 -
+DEBUG: 2020-12-11 04:20:11,947 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:20:12,052 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:20:12,059 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:20:12,394 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:20:12,402 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:20:12,838 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:20:12,935 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:20:13,040 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+INFO: 2020-12-11 04:20:13,048 127.0.0.1 - - [11/Dec/2020 04:20:13] "[37mGET /?alarm=2020-12-11T04%3A21&two=tan HTTP/1.1[0m" 200 -
+DEBUG: 2020-12-11 04:20:43,220 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:20:43,327 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:20:43,338 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:20:43,685 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:20:43,777 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:20:44,124 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:20:44,131 127.0.0.1 - - [11/Dec/2020 04:20:44] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG: 2020-12-11 04:21:14,193 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:21:15,300 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:21:15,311 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:21:16,015 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:21:16,195 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:21:17,574 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:21:17,693 127.0.0.1 - - [11/Dec/2020 04:21:17] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:33:49,998 Alarm scheduler set up
+INFO: 2020-12-11 04:33:51,013  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 04:34:04,588 Arguments from webapp extracted
+DEBUG: 2020-12-11 04:34:04,601 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:34:04,734 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:34:04,753 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:34:05,097 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:34:05,104 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:34:05,519 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:34:05,598 notification list created
+INFO: 2020-12-11 04:34:05,619 127.0.0.1 - - [11/Dec/2020 04:34:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:34:13,336 Arguments from webapp extracted
+DEBUG: 2020-12-11 04:34:13,339 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:34:13,436 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:34:13,445 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:34:13,969 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:34:13,976 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:34:14,808 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:34:14,896 notification list created
+INFO: 2020-12-11 04:34:14,896 inputted alarm converted to carry out calculations
+INFO: 2020-12-11 04:34:14,898 Alarm time has elapsed
+INFO: 2020-12-11 04:34:14,898 alarm set for news update only
+INFO: 2020-12-11 04:34:14,898 relevant announcement information extracted from API
+DEBUG: 2020-12-11 04:34:14,904 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:34:15,001 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:34:15,012 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:34:15,784 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:34:16,139 announcement has been made
+INFO: 2020-12-11 04:34:16,140 127.0.0.1 - - [11/Dec/2020 04:34:16] "[37mGET /?alarm=2020-12-11T04%3A35&two=tan&news=news HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:34:46,214 Arguments from webapp extracted
+DEBUG: 2020-12-11 04:34:46,378 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:34:46,481 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:34:46,491 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:34:46,822 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:34:46,833 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:34:47,247 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:34:47,328 notification list created
+INFO: 2020-12-11 04:34:47,329 127.0.0.1 - - [11/Dec/2020 04:34:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:35:17,406 Arguments from webapp extracted
+DEBUG: 2020-12-11 04:35:17,418 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:35:17,501 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:35:17,512 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:35:17,943 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:35:18,044 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:35:18,481 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:35:18,582 notification list created
+INFO: 2020-12-11 04:35:18,583 127.0.0.1 - - [11/Dec/2020 04:35:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:35:48,645 Arguments from webapp extracted
+DEBUG: 2020-12-11 04:35:48,757 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:35:49,948 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:35:49,957 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:35:50,351 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:35:50,439 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:35:50,779 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:35:50,783 notification list created
+INFO: 2020-12-11 04:35:50,784 127.0.0.1 - - [11/Dec/2020 04:35:50] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:36:20,882 Arguments from webapp extracted
+DEBUG: 2020-12-11 04:36:20,886 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:36:20,987 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:36:20,996 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:36:21,887 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:36:22,031 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:36:22,466 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:36:22,552 notification list created
+INFO: 2020-12-11 04:36:22,553 127.0.0.1 - - [11/Dec/2020 04:36:22] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:36:52,638 Arguments from webapp extracted
+DEBUG: 2020-12-11 04:36:52,699 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 04:36:52,812 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:36:52,822 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:36:53,163 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 04:36:53,173 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 04:36:53,598 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 04:36:53,682 notification list created
+INFO: 2020-12-11 04:36:53,683 127.0.0.1 - - [11/Dec/2020 04:36:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:38:37,022 Alarm scheduler set up
+INFO: 2020-12-11 04:38:37,947  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 04:38:39,894 Arguments from webapp extracted
+INFO: 2020-12-11 04:38:40,845 notification list created
+INFO: 2020-12-11 04:38:40,860 127.0.0.1 - - [11/Dec/2020 04:38:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:38:48,193 Arguments from webapp extracted
+INFO: 2020-12-11 04:38:49,319 notification list created
+INFO: 2020-12-11 04:38:49,319 inputted alarm converted to carry out calculations
+INFO: 2020-12-11 04:38:49,319 Alarm time has elapsed
+INFO: 2020-12-11 04:38:49,319 alarm set for weather update only
+INFO: 2020-12-11 04:38:49,319 relevant announcement information extracted from API
+INFO: 2020-12-11 04:38:49,420 announcement has been made
+INFO: 2020-12-11 04:38:49,421 127.0.0.1 - - [11/Dec/2020 04:38:49] "[37mGET /?alarm=2020-12-11T04%3A40&two=tan&weather=weather HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:39:19,478 Arguments from webapp extracted
+INFO: 2020-12-11 04:39:21,570 notification list created
+INFO: 2020-12-11 04:39:21,571 127.0.0.1 - - [11/Dec/2020 04:39:21] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:39:21,642 Arguments from webapp extracted
+INFO: 2020-12-11 04:39:23,568 notification list created
+ERROR: 2020-12-11 04:39:23,570 Exception on /index [GET]
+Traceback (most recent call last):
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/tan/Desktop/ECM1400/CA3/CA3main.py", line 80, in controller
+    if i['title'] == notif_item['title']:
+TypeError: string indices must be integers
+INFO: 2020-12-11 04:39:23,580 127.0.0.1 - - [11/Dec/2020 04:39:23] "[35m[1mGET /index?notif=Total+Covid+cases+ HTTP/1.1[0m" 500 -
+INFO: 2020-12-11 04:39:55,323 Arguments from webapp extracted
+INFO: 2020-12-11 04:39:56,313 notification list created
+INFO: 2020-12-11 04:39:56,314 127.0.0.1 - - [11/Dec/2020 04:39:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:40:26,370 Arguments from webapp extracted
+INFO: 2020-12-11 04:40:28,438 notification list created
+INFO: 2020-12-11 04:40:28,439 127.0.0.1 - - [11/Dec/2020 04:40:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:40:58,506 Arguments from webapp extracted
+INFO: 2020-12-11 04:41:00,462 notification list created
+INFO: 2020-12-11 04:41:00,463 127.0.0.1 - - [11/Dec/2020 04:41:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:41:19,963 Arguments from webapp extracted
+INFO: 2020-12-11 04:41:21,835 notification list created
+INFO: 2020-12-11 04:41:21,836 inputted alarm converted to carry out calculations
+INFO: 2020-12-11 04:41:21,836 Alarm time has elapsed
+INFO: 2020-12-11 04:41:21,836 Standard alarm
+INFO: 2020-12-11 04:41:21,836 relevant announcement information extracted from API
+INFO: 2020-12-11 04:41:21,956 announcement has been made
+INFO: 2020-12-11 04:41:21,957 127.0.0.1 - - [11/Dec/2020 04:41:21] "[37mGET /?alarm=2020-12-11T04%3A43&two=tan HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 04:41:24,126 Arguments from webapp extracted
+INFO: 2020-12-11 04:41:26,398 notification list created
+ERROR: 2020-12-11 04:41:26,398 Exception on /index [GET]
+Traceback (most recent call last):
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/tan/Desktop/ECM1400/CA3/CA3main.py", line 87, in controller
+    if alarm_item['title'] == alarm['title']:
+TypeError: string indices must be integers
+INFO: 2020-12-11 04:41:26,401 127.0.0.1 - - [11/Dec/2020 04:41:26] "[35m[1mGET /index?alarm_item=Alarm+set+for+04%3A43 HTTP/1.1[0m" 500 -
+INFO: 2020-12-11 05:11:22,120 Alarm scheduler set up
+DEBUG: 2020-12-11 05:11:23,333 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:11:24,523 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+INFO: 2020-12-11 05:12:24,263 Alarm scheduler set up
+DEBUG: 2020-12-11 05:12:25,353 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:12:25,474 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:12:25,485 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:12:25,604 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+INFO: 2020-12-11 05:27:02,010 Alarm scheduler set up
+DEBUG: 2020-12-11 05:27:03,052 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:27:03,525 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:27:03,617 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:27:03,965 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:27:03,976 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:27:04,316 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:42:20,651 Alarm scheduler set up
+INFO: 2020-12-11 05:42:21,702  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 05:42:45,082 Alarm scheduler set up
+INFO: 2020-12-11 05:42:45,879  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 05:42:55,296 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:42:55,413 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:42:55,530 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:42:55,543 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:42:55,875 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:42:55,959 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:42:56,387 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:42:56,467 notification list created
+INFO: 2020-12-11 05:42:56,480 127.0.0.1 - - [11/Dec/2020 05:42:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:43:10,910 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:43:10,932 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:43:11,036 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:43:11,044 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:43:11,417 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:43:11,423 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:43:12,177 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:43:12,311 notification list created
+INFO: 2020-12-11 05:43:12,311 inputted alarm converted to carry out calculations
+INFO: 2020-12-11 05:43:12,313 Alarm time has elapsed
+INFO: 2020-12-11 05:43:12,313 alarm set for weather and news update
+INFO: 2020-12-11 05:43:12,313 Announcement information extracted from API
+DEBUG: 2020-12-11 05:43:12,318 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:43:12,429 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:43:12,440 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:43:12,886 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:43:12,979 announcement has been made
+INFO: 2020-12-11 05:43:12,980 127.0.0.1 - - [11/Dec/2020 05:43:12] "[37mGET /?alarm=2020-12-11T05%3A44&two=tan&news=news&weather=weather HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:43:27,780 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:43:27,784 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:43:27,873 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:43:27,883 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:43:28,216 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:43:28,228 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:43:28,564 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:43:28,567 notification list created
+INFO: 2020-12-11 05:43:28,567 inputted alarm converted to carry out calculations
+INFO: 2020-12-11 05:43:28,567 Alarm time has elapsed
+INFO: 2020-12-11 05:43:28,567 Standard alarm
+INFO: 2020-12-11 05:43:28,567 relevant announcement information extracted from API
+DEBUG: 2020-12-11 05:43:28,574 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:43:28,693 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+INFO: 2020-12-11 05:43:28,700 announcement has been made
+INFO: 2020-12-11 05:43:28,701 127.0.0.1 - - [11/Dec/2020 05:43:28] "[37mGET /?alarm=2020-12-11T05%3A46&two=wake+up HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:43:39,864 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:43:39,973 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:43:41,113 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:43:41,122 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:43:41,517 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:43:41,529 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:43:41,913 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:43:41,920 notification list created
+INFO: 2020-12-11 05:43:41,920 inputted alarm converted to carry out calculations
+INFO: 2020-12-11 05:43:41,920 Alarm time has elapsed
+INFO: 2020-12-11 05:43:41,920 Standard alarm
+INFO: 2020-12-11 05:43:41,920 relevant announcement information extracted from API
+DEBUG: 2020-12-11 05:43:41,925 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:43:42,035 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+INFO: 2020-12-11 05:43:42,042 announcement has been made
+INFO: 2020-12-11 05:43:42,042 127.0.0.1 - - [11/Dec/2020 05:43:42] "[37mGET /?alarm=2020-12-11T05%3A44&two=ALarm HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:44:07,813 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:44:07,825 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:44:07,926 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:44:07,935 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:44:08,650 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:44:08,830 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:44:09,624 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:44:09,719 notification list created
+INFO: 2020-12-11 05:44:09,720 user wants to cancel alarm
+ERROR: 2020-12-11 05:44:09,720 Exception on /index [GET]
+Traceback (most recent call last):
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/tan/Desktop/ECM1400/CA3/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/tan/Desktop/ECM1400/CA3/CA3main.py", line 89, in controller
+    if alarm_item['title'] == alarm['title']:
+TypeError: string indices must be integers
+INFO: 2020-12-11 05:44:09,729 127.0.0.1 - - [11/Dec/2020 05:44:09] "[35m[1mGET /index?alarm_item=Alarm+set+for+05%3A44 HTTP/1.1[0m" 500 -
+INFO: 2020-12-11 05:44:22,412 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:44:22,538 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:44:22,629 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:44:22,640 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:44:23,449 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:44:23,579 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:44:24,371 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:44:24,531 notification list created
+INFO: 2020-12-11 05:44:24,531 127.0.0.1 - - [11/Dec/2020 05:44:24] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:44:54,716 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:44:54,737 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:44:54,832 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:44:54,850 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:44:55,603 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:44:55,911 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:44:56,728 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:44:56,852 notification list created
+INFO: 2020-12-11 05:44:56,854 127.0.0.1 - - [11/Dec/2020 05:44:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:46:04,270 Alarm scheduler set up
+INFO: 2020-12-11 05:46:05,218  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 05:46:07,712 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:46:07,831 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:46:09,133 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:46:09,142 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:46:09,500 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:46:09,508 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:46:09,856 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:46:09,858 notification list created
+INFO: 2020-12-11 05:46:09,877 127.0.0.1 - - [11/Dec/2020 05:46:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:46:15,472 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:46:15,476 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:46:15,582 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:46:15,592 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:46:16,397 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:46:16,502 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:46:17,037 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:46:17,216 notification list created
+INFO: 2020-12-11 05:46:17,216 inputted alarm converted to carry out calculations
+INFO: 2020-12-11 05:46:17,217 Alarm time has elapsed
+INFO: 2020-12-11 05:46:17,217 Standard alarm
+INFO: 2020-12-11 05:46:17,217 relevant announcement information extracted from API
+DEBUG: 2020-12-11 05:46:17,223 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:46:17,318 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+INFO: 2020-12-11 05:46:17,324 announcement has been made
+INFO: 2020-12-11 05:46:17,325 127.0.0.1 - - [11/Dec/2020 05:46:17] "[37mGET /?alarm=2020-12-11T05%3A47&two=ALarm HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:46:47,382 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:46:47,440 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:46:47,552 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:46:47,563 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:46:48,272 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:46:48,499 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:46:49,266 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:46:49,394 notification list created
+INFO: 2020-12-11 05:46:49,395 127.0.0.1 - - [11/Dec/2020 05:46:49] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 05:47:19,463 Arguments from webapp extracted
+DEBUG: 2020-12-11 05:47:19,468 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 05:47:19,589 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:47:19,600 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:47:19,955 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 05:47:19,969 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 05:47:20,316 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 05:47:20,319 notification list created
+INFO: 2020-12-11 05:47:20,319 127.0.0.1 - - [11/Dec/2020 05:47:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 07:30:50,316 Alarm scheduler set up
+INFO: 2020-12-11 07:30:51,230  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 07:30:56,439 Arguments from webapp extracted
+DEBUG: 2020-12-11 07:30:56,663 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 07:30:57,738 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 07:30:57,764 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 07:30:58,372 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 07:30:58,385 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 07:30:59,113 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 07:30:59,300 notification list created
+INFO: 2020-12-11 07:30:59,320 127.0.0.1 - - [11/Dec/2020 07:30:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 07:31:27,713 Alarm scheduler set up
+INFO: 2020-12-11 07:31:28,557  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 07:31:31,702 Arguments from webapp extracted
+DEBUG: 2020-12-11 07:31:31,720 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 07:31:31,809 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 07:31:31,819 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 07:31:32,157 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 07:31:32,163 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 07:31:32,498 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 07:31:32,502 notification list created
+INFO: 2020-12-11 07:31:32,518 127.0.0.1 - - [11/Dec/2020 07:31:32] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 2020-12-11 07:31:53,806 Alarm scheduler set up
+INFO: 2020-12-11 07:31:54,603  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO: 2020-12-11 07:31:54,931 Arguments from webapp extracted
+DEBUG: 2020-12-11 07:31:55,009 Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG: 2020-12-11 07:31:55,133 https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=areaType=nation;areaName=england&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeathsByDeathDate%22:%22newDeathsByDeathDate%22,%22cumDeathsByDeathDate%22:%22cumDeathsByDeathDate%22%7D HTTP/1.1" 200 None
+DEBUG: 2020-12-11 07:31:55,143 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 07:31:55,513 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+DEBUG: 2020-12-11 07:31:55,522 Starting new HTTP connection (1): newsapi.org:80
+DEBUG: 2020-12-11 07:31:55,882 http://newsapi.org:80 "GET /v2/top-headlines?sources=bbc-news&apiKey=d245feaf3de74cf4800f3d9d2f11c7fc HTTP/1.1" 200 None
+INFO: 2020-12-11 07:31:55,889 notification list created
+INFO: 2020-12-11 07:31:55,904 127.0.0.1 - - [11/Dec/2020 07:31:55] "[37mGET / HTTP/1.1[0m" 200 -
