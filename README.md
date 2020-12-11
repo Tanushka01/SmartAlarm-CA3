@@ -17,7 +17,7 @@ For this program, you require the following modules:
 As mentioned above you will require your own news and weather API keys. These can be found at https://newsapi.org/ and https://openweathermap.org/api for news and weather API keys respectively.
 Once You have your own API keys, go to the config.json file to enter your keys. In the config.json file u will also be able to edit the name of the city. This determines where your weather information comes from. The default is weather updates of Exeter.
 Run CA3main.py to deploy the smart alarm.
-Once running, U will be able to set alarms for the current day on when you'd like to receive verbal notifications about the corona virus cases, top news headlines and the weather depending on the conditions your alarm was set with. Once the alarm time has elapsed, the alarm will be removed from the Alarms column
+Once running, you will be able to set alarms for the current day on when you'd like to receive verbal notifications about the corona virus cases, top news headlines and the weather depending on the conditions your alarm was set with. Once the alarm time has elapsed, the alarm will be removed from the Alarms column
 ### Notifications 
 Provide you with current relevant Covid,news and weather information if you wish to not set an alarm.
 ## Details
