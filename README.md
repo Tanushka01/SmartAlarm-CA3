@@ -10,7 +10,7 @@ The information can be diliverd to the user via textual notifications that requi
 For this program, you require the following modules:
 - pip install Flask
 - pip install requests
--pip install pyttsx3
+- pip install pyttsx3
 
 ## Getting Started
 ### The Alarm:
